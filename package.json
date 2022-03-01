@@ -1,0 +1,78 @@
+{
+  "name": "chohyo",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@popperjs/core": "^2.10.2",
+    "@react-three/fiber": "^7.0.19",
+    "@reduxjs/toolkit": "^1.6.2",
+    "@tensorflow-models/face-landmarks-detection": "0.0.3",
+    "@tensorflow/tfjs-backend-webgl": "^3.11.0",
+    "@tensorflow/tfjs-converter": "^3.11.0",
+    "@tensorflow/tfjs-core": "^3.11.0",
+    "@testing-library/jest-dom": "^5.15.0",
+    "@testing-library/react": "^11.2.7",
+    "@testing-library/user-event": "^12.8.3",
+    "@types/crypto-js": "^4.0.2",
+    "@types/gl-matrix": "^3.2.0",
+    "@types/jest": "^26.0.24",
+    "@types/node": "^12.20.37",
+    "@types/pdfmake": "^0.1.19",
+    "@types/qrcode": "^1.4.1",
+    "@types/react": "^17.0.35",
+    "@types/react-dom": "^17.0.11",
+    "@types/three": "^0.134.0",
+    "@vladmandic/face-api": "^1.5.7",
+    "axios": "^0.24.0",
+    "bootstrap": "^5.1.3",
+    "crypto-js": "^4.1.1",
+    "dayjs": "^1.10.7",
+    "exceljs": "^4.3.0",
+    "jquery": "^3.6.0",
+    "jsencrypt": "^3.2.1",
+    "jsqr": "^1.4.0",
+    "node-rsa": "^1.1.1",
+    "pdfmake": "^0.2.4",
+    "popper.js": "^1.16.1",
+    "qrcode": "^1.4.4",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-redux": "^7.2.6",
+    "react-router": "^6.0.2",
+    "react-router-dom": "^6.0.2",
+    "react-scripts": "4.0.3",
+    "react-transition-group": "^4.4.2",
+    "redux-logger": "^3.0.6",
+    "redux-saga": "^1.1.3",
+    "sass": "^1.43.4",
+    "symbol-sdk": "^1.0.2",
+    "three": "^0.134.0",
+    "typescript": "^4.4.4",
+    "web-vitals": "^1.1.2",
+    "xlsx": "^0.17.5"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

@@ -1,0 +1,23 @@
+version: "3"
+
+services:
+  php:
+    build: ./docker-files/php
+    volumes:
+      - ..:/var/www/html
+      - vendor-store:/var/www/html/api/vendor
+      - node_modules-store:/var/www/html/node_modules
+    ports:
+      - "80:80"
+      - "443:443"
+      - 9000:9000
+    tty: true
+    environment:
+      SERVER_NAME: 'chohyo'
+      IPADDR: '192.168.2.225'
+      API_KEY: 'mae32makase'
+
+
+volumes:
+  vendor-store:
+  node_modules-store:

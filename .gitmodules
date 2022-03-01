@@ -1,0 +1,6 @@
+[submodule "src/_lib"]
+	path = src/_lib
+	url = https://bitbucket.org/uzaking/typescript_lib
+[submodule "ssl"]
+	path = ssl
+	url = https://infotec_moriya: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@github.com/infotec-repository/share_key

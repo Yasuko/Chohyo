@@ -1,0 +1,42 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+
+.callButton {
+  text-align: center;
+  margin: 20px auto;
+  box-shadow: 2px 2px 4px rgba(10,10,10,1);
+  border-radius: 5px;
+  padding: 5px;
+  background-color: rgba(150,150,150,1);
+  cursor: pointer;
+}
+
+.callButton:hover {
+  box-shadow: 0px 0px 4px rgba(10,10,10,1);
+  background-color: rgba(120,120,120,1);
+}
+
+
+.viewHeaders > div {
+  text-align: left;
+  font-size: 0.7em;
+  width: 500px;
+  background-color: white;
+}
+
+.flow_detail
+{
+  background-color: black;
+}

@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"path": "src\\reducers"
+		},
+		{
+			"path": "src\\task"
+		},
+		{
+			"path": "src\\helper"
+		}
+	],
+	"settings": {}
+}
