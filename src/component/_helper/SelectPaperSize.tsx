@@ -14,7 +14,9 @@ export class SelectPaperSize extends React.Component<PaperSize, {}>{
             <div className="container">
                 <label
                     htmlFor="paper-size"
-                    >用紙サイズ:</label>
+                >
+                    <h6>用紙サイズ:</h6>
+                </label>
                 <div className="container-fluid">
                         <div className="row">
                     {['A3', 'A4', 'A5', 'B3', 'B4', 'B5'].map((value) => {

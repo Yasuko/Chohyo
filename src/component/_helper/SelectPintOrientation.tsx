@@ -17,7 +17,9 @@ export class SelectPrintOrientation extends React.Component<PrintOrientation, {}
         return (
             <div>
                 <label
-                    htmlFor="paper-size">印刷向き:</label>
+                    htmlFor="paper-size">
+                        <h6>印刷向き:</h6>
+                </label>
                 <div className="container-fluid">
                     <div className="row">
                         <div className="form-check form-check-inline col">

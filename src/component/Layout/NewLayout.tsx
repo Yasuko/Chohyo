@@ -56,13 +56,13 @@ export class Newlayout
                     <ul className="nav nav-tabs" role="tablist">
                         <li className="nav-item">
                             <a
-                                className="nav-link active" id="item1-tab" href="#item1"
-                                onClick={() => {this.tabChange(1)}}>テキスト</a>
+                                className="nav-link active" id="item1-tab" href="#item2"
+                                onClick={() => {this.tabChange(1)}}>SVG</a>
                         </li>
                         <li className="nav-item">
                             <a
-                                className="nav-link" id="item2-tab" href="#item2"
-                                onClick={() => {this.tabChange(2)}}>SVG</a>
+                                className="nav-link" id="item2-tab" href="#item1"
+                                onClick={() => {this.tabChange(2)}}>テキスト</a>
                         </li>
                         <li className="nav-item">
                             <a
@@ -72,6 +72,17 @@ export class Newlayout
                     </ul>
                     <div className="tab-content">
                         <div className="tab-pane fade show active" id="item1">
+                            <div className="container LayoutTemplate">
+                                <AddTemplate next="LayoutAction/changeTemplate" />
+                            </div>
+                            <div className="container LayoutTemplate">
+                                <AddSpecTemplate
+                                    next="LayoutAction/changePaperSpec"
+                                    paper="A4"
+                                    orientation="portrait" />
+                            </div>
+                        </div>
+                        <div className="tab-pane fade" id="item2">
                             <button
                                 type="button"
                                 className="btn btn-secondary btn-sm"
@@ -94,18 +105,6 @@ export class Newlayout
                                     <AddCSVText next="LayoutAction/exchangeCSVText" />
                                 </div>
                             </div>
-                            </div>
-                        </div>
-                        <div className="tab-pane fade" id="item2">
-                            <div className="container LayoutTemplate">
-                                <AddTemplate next="LayoutAction/changeTemplate" />
-                            </div>
-                            <div className="container LayoutTemplate">
-                                <AddSpecTemplate
-                                    next="LayoutAction/changePaperSpec"
-                                    paper="A4"
-                                    orientation="portrait" />
-                            </div>
                         </div>
                         <div className="tab-pane fade" id="item3">
                             <div className="container LayoutTemplate">
@@ -114,6 +113,7 @@ export class Newlayout
                         </div>
                     </div>
                 </div>
+            </div>
         );
     }
 
