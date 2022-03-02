@@ -16,8 +16,6 @@ import {
 export class NewlayoutExcell
     extends React.Component<ExcellLayoutPropsInterface, {}>
 {
-    private tabCounter: number = 2;
-
     private nl: any;
 
     private initialJob(): void {
@@ -58,17 +56,13 @@ export class NewlayoutExcell
                             onClick={
                                 () => {
                                     this.props.dispatch({
-                                        type    : 'NewPrint/set',
-                                        layout  : this.nl
-                                    });
-                                    this.props.dispatch({
-                                        type    : 'PrintAction/export',
+                                        type    : 'LayoutAction/exportValiableList',
                                     });
                                 }
                         }>変数一覧出力</button>
                     </div>
                 </nav>
-                <div className="container">
+                <div className="LayoutBaseExcell">
                     { this.showTexts() }
                 </div>
                 <div className="LayoutSub">
@@ -82,12 +76,12 @@ export class NewlayoutExcell
 
     private showTexts(): any
     {
-        if (this.nl.texts.length <= 1 ) {
+        if (this.nl.contents.length <= 1 ) {
             return (<tr><td>登録なし</td></tr>)
         }
-        const _lists = Object.keys(this.nl.texts).map((val: any, key) => {
+        const _lists = Object.keys(this.nl.contents).map((val: any, key) => {
             return (
-                <div key={key} className='d-flex'>
+                <div key={key} className='d-flex TextList'>
                     <div className="my-box col TextTitle2">
                         {val}
                     </div>
@@ -95,7 +89,7 @@ export class NewlayoutExcell
                         <input
                             className="form-control TextInputMiddle"
                             type="text"
-                            defaultValue={this.nl.texts[val]}
+                            defaultValue={this.nl.contents[val]}
                             onChange={(e) => {
                                 this.props.dispatch({
                                     type    : 'ExcellLayout/updateContents',
@@ -104,7 +98,6 @@ export class NewlayoutExcell
                                 });
                             }}/>
                     </div>
-                    <br></br>
                 </div>
             );
         });

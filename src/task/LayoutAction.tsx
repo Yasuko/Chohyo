@@ -10,7 +10,6 @@ import { PaperPropsInterface }          from '../reducers/Paper';
 import { ListTextPropsInterface } from '../reducers/_Text/ListText';
 import { initialState as initialLayout } from '../reducers/_Layout/_layout.interface';
 import { ActiveLayoutPropsInterface }   from '../reducers/_Layout/ActiveLayout';
-import { NewLayoutPropsInterface }      from '../reducers/_Layout/NewLayout';
 import { LayoutImagePropsInterface } from '../reducers/_Image/LayoutImage';
 import { ExcellLayoutPropsInterface }   from '../reducers/_Layout/ExcellLayout';
 
@@ -20,7 +19,6 @@ const paperParam    = (state: PaperPropsInterface)          => state.Paper;
 const activeLayout  = (state: ActiveLayoutPropsInterface)   => state.ActiveLayout;
 const layoutImage   = (state: LayoutImagePropsInterface)    => state.LayoutImage;
 const listText      = (state: ListTextPropsInterface)       => state.ListText;
-const newLayout     = (state: NewLayoutPropsInterface)      => state.NewLayout;
 const excellLayout  = (state: ExcellLayoutPropsInterface)   => state.ExcellLayout;
 
 // Root Saga登録配列
@@ -31,6 +29,7 @@ export const RootLayoutAction = [
     takeEvery('LayoutAction/exchangeCSVText', exchangeCSVText),
     takeEvery('LayoutAction/changeExcellTemplate', changeExcellTemplate),
     takeEvery('LayoutAction/atachCSV'       , atachCSV),
+    takeEvery('LayoutAction/exportValiableList', exportValiableList),
 ];
 
 /**
@@ -175,6 +174,12 @@ export function* atachCSV(val: any): any
         type    : 'ExcellLayout/setContents',
         contents: LayoutHelper.call().replaceCSV(layout.contents, val.csv)
     });
+}
+
+export function* exportValiableList(): any
+{
+    const layout = JSON.parse(JSON.stringify(yield select(excellLayout)));
+    SpredsheetHelper.call().exportCSV(layout.contents);
 }
 
 
